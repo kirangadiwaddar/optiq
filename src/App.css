@@ -1,0 +1,219 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: url(./img/bg-body.jpg)  center;
+}
+button{
+  border-radius: 8px !important;
+}
+.code-block{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+}
+.flow-chart {
+  height: 100%;
+  overflow-y: auto;
+  flex-basis: 40%;
+  padding: 20px;
+  text-align: center;
+}
+.fr-title{
+  font-size: 14px;
+  margin-bottom: 32px;
+  color: #595959;
+}
+.code-drawer {
+  flex-basis: 60%;
+  background-color: #fff;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+}
+.dr-title {
+  font-size: 18px;
+  color: #262626;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ECEEF2;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.check-item {  
+  text-transform: capitalize;
+}
+.check-list-item{
+  border-bottom: 1px solid #ECEEF2;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.check-item .MuiFormControlLabel-label {
+  color: #262626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.fl-start::before,
+.fl-end::before {
+  content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #0496FF;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: initial;
+    bottom: initial;
+}
+.fl-start::before {
+  bottom: -10px;
+}
+.fl-end::before {
+  top: -10px;
+}
+.fl-chart {
+  position: relative;
+}
+.fl-chart::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background:#0496FF;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.fl-btn-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.fl-noActive .fl-btn{
+  left: -150px !important;
+  transition: left .3s;
+}
+.fl-active  .fl-btn{
+  left: 0px !important;
+  transition:left  .3s; 
+  color: #595959 !important;
+}
+.fl-active .MuiButton-startIcon {
+  display: none;
+}
+.fl-btn.fl-btn-added {
+  color: #595959 !important;
+}
+.fl-start,
+.fl-end {
+  border: 1px solid #ECEEF2 !important;
+  background: #fff !important;
+  color: #595959 !important;
+  box-shadow: none !important;
+  text-transform: capitalize !important;
+  font-weight: 500;
+  width: 190px;
+}
+.fl-btn{
+  border: 2px solid #ECEEF2 !important;
+  background: #fff !important;
+  color: #0496FF !important;
+  box-shadow: none !important;
+  text-transform: capitalize !important;
+  font-weight: 500;
+}
+.fl-chart .fl-item-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.fl-chart .fl-item-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.fl-btn{
+  position: relative;
+  width: 190px;
+  border-radius: 8px;
+}
+.fl-btn::before {
+  content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #0496FF;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+}
+.fl-btn::after {
+  content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #0496FF;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    bottom: -10px;
+    visibility: visible;
+}
+.fl-noActive .fl-btn::before,
+.fl-noActive .fl-btn::after {
+  visibility: hidden;
+  transition: none;
+}
+.fl-add-plus{
+  padding: 0;
+    width: 18px !important;
+    height: 18px !important;
+    background: #fff !important;
+    cursor: pointer !important;
+    margin: 15px 0 !important;
+}
+.fl-noActive .fl-add-plus {  
+    visibility: hidden;
+}
+.fl-active .fl-add-plus{
+  visibility: visible;
+}
+.btn-add-close {
+  position: relative;
+}
+.close-icon{
+  width: 18px;
+  height: 18px;
+  background-color: #F44336;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 1;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: .3s;
+}
+.close-icon svg {
+  width: 12px;
+}
+.btn-add-close:hover .close-icon {
+  opacity: 1;
+  transition: .3s;
+}
